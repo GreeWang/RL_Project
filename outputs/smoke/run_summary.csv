@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+smoke_7_b265acb9,smoke,7,easy,20,-31.7,0.45,34.4,0.0,50.0,0.18092209605492351,outputs\smoke\qtable_final.npz,outputs\smoke\config.json,unknown
