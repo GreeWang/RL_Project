@@ -1,0 +1,974 @@
+[
+  {
+    "converged_episode":196.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.53125,
+    "message":"Converged at ep 196 | MA Success: 0.960 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"alpha_0.05",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":195.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.45,
+    "message":"Converged at ep 195 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"alpha_0.05",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":200.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.4343434343,
+    "message":"Converged at ep 200 | MA Success: 0.990 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"alpha_0.05",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.61,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"alpha_0.1",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"alpha_0.1",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.4639175258,
+    "message":"Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"alpha_0.1",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":110.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.43,
+    "message":"Converged at ep 110 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"alpha_0.5",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":109.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.4285714286,
+    "message":"Converged at ep 109 | MA Success: 0.980 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"alpha_0.5",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":108.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.2708333333,
+    "message":"Converged at ep 108 | MA Success: 0.960 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"alpha_0.5",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.2929292929,
+    "message":"Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"baseline",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"baseline",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.5,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"baseline",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3958333333,
+    "message":"Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"baseline",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.94,
+    "final_steps":8.2872340426,
+    "message":"Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"baseline",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.61,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.4639175258,
+    "message":"Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":141.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.3434343434,
+    "message":"Converged at ep 141 | MA Success: 0.990 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":141.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.3298969072,
+    "message":"Converged at ep 141 | MA Success: 0.970 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.40625,
+    "message":"Converged at ep 144 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.3737373737,
+    "message":"Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":142.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3541666667,
+    "message":"Converged at ep 142 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":139.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3645833333,
+    "message":"Converged at ep 139 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":137.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.26,
+    "message":"Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"fast",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":140.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.41,
+    "message":"Converged at ep 140 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"fast",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.4795918367,
+    "message":"Converged at ep 136 | MA Success: 0.980 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"fast",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.3917525773,
+    "message":"Converged at ep 136 | MA Success: 0.970 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"fast",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.49,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"fast",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":137.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.72,
+    "message":"Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.7 (Thr: \u226410)",
+    "experiment":"fixed_0.1",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":0.9,
+    "final_steps":8.5666666667,
+    "message":"Converged at ep 136 | MA Success: 0.900 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"fixed_0.1",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.75,
+    "message":"Converged at ep 136 | MA Success: 1.000 | MA Steps: 8.8 (Thr: \u226410)",
+    "experiment":"fixed_0.1",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":0.94,
+    "final_steps":8.6808510638,
+    "message":"Converged at ep 136 | MA Success: 0.940 | MA Steps: 8.7 (Thr: \u226410)",
+    "experiment":"fixed_0.1",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":140.0,
+    "converged":true,
+    "final_success":0.94,
+    "final_steps":8.9787234043,
+    "message":"Converged at ep 140 | MA Success: 0.940 | MA Steps: 9.0 (Thr: \u226410)",
+    "experiment":"fixed_0.1",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.98,
+    "final_steps":15.2857142857,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"slow",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.99,
+    "final_steps":15.8181818182,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"slow",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.99,
+    "final_steps":14.8787878788,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"slow",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.96,
+    "final_steps":15.8854166667,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"slow",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.97,
+    "final_steps":14.4742268041,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"slow",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":204.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.45,
+    "message":"Converged at ep 204 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"standard",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":248.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.3195876289,
+    "message":"Converged at ep 248 | MA Success: 0.970 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"standard",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":220.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.42,
+    "message":"Converged at ep 220 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"standard",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":202.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.34,
+    "message":"Converged at ep 202 | MA Success: 1.000 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"standard",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":218.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.51,
+    "message":"Converged at ep 218 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"standard",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":133.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.47,
+    "message":"Converged at ep 133 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"decay_0.95",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":130.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 130 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"decay_0.95",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":130.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.4081632653,
+    "message":"Converged at ep 130 | MA Success: 0.980 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"decay_0.95",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":137.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.53,
+    "message":"Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"decay_0.99",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":136.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.38,
+    "message":"Converged at ep 136 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"decay_0.99",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":133.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.4536082474,
+    "message":"Converged at ep 133 | MA Success: 0.970 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"decay_0.99",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.61,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"decay_0.995",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"decay_0.995",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.4639175258,
+    "message":"Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"decay_0.995",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":177.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.2551020408,
+    "message":"Converged at ep 177 | MA Success: 0.980 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"gamma_0.5",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":172.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3958333333,
+    "message":"Converged at ep 172 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.5",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":180.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.38,
+    "message":"Converged at ep 180 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.5",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":181.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.4591836735,
+    "message":"Converged at ep 181 | MA Success: 0.980 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"gamma_0.5",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":172.0,
+    "converged":true,
+    "final_success":0.95,
+    "final_steps":8.4947368421,
+    "message":"Converged at ep 172 | MA Success: 0.950 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"gamma_0.5",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":147.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.2448979592,
+    "message":"Converged at ep 147 | MA Success: 0.980 | MA Steps: 8.2 (Thr: \u226410)",
+    "experiment":"gamma_0.8",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":149.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.381443299,
+    "message":"Converged at ep 149 | MA Success: 0.970 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.8",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.51,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"gamma_0.8",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":147.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.3711340206,
+    "message":"Converged at ep 147 | MA Success: 0.970 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.8",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":150.0,
+    "converged":true,
+    "final_success":0.93,
+    "final_steps":8.2903225806,
+    "message":"Converged at ep 150 | MA Success: 0.930 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"gamma_0.8",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.2929292929,
+    "message":"Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"gamma_0.95",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.95",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.5,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"gamma_0.95",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3958333333,
+    "message":"Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.95",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.94,
+    "final_steps":8.2872340426,
+    "message":"Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"gamma_0.95",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":147.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.44,
+    "message":"Converged at ep 147 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.99",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.39,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.99",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":138.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.48,
+    "message":"Converged at ep 138 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"gamma_0.99",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":137.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3958333333,
+    "message":"Converged at ep 137 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"gamma_0.99",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":138.0,
+    "converged":true,
+    "final_success":0.95,
+    "final_steps":8.2947368421,
+    "message":"Converged at ep 138 | MA Success: 0.950 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"gamma_0.99",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.2929292929,
+    "message":"Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.5,
+    "message":"Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.3958333333,
+    "message":"Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.94,
+    "final_steps":8.2872340426,
+    "message":"Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"easy",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":147.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.381443299,
+    "message":"Converged at ep 147 | MA Success: 0.970 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":141.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.3469387755,
+    "message":"Converged at ep 141 | MA Success: 0.980 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":141.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.49,
+    "message":"Converged at ep 141 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.3163265306,
+    "message":"Converged at ep 144 | MA Success: 0.980 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":134.0,
+    "converged":true,
+    "final_success":0.93,
+    "final_steps":8.5161290323,
+    "message":"Converged at ep 134 | MA Success: 0.930 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"hard",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":144.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.45,
+    "message":"Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":143.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.4081632653,
+    "message":"Converged at ep 143 | MA Success: 0.980 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":142.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.49,
+    "message":"Converged at ep 142 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":139.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.3163265306,
+    "message":"Converged at ep 139 | MA Success: 0.980 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":138.0,
+    "converged":true,
+    "final_success":0.97,
+    "final_steps":8.4329896907,
+    "message":"Converged at ep 138 | MA Success: 0.970 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"medium",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.19,
+    "final_steps":53.0526315789,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"random_policy",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.19,
+    "final_steps":43.4210526316,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"random_policy",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.25,
+    "final_steps":46.8,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"random_policy",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.19,
+    "final_steps":51.4210526316,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"random_policy",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":null,
+    "converged":false,
+    "final_success":0.17,
+    "final_steps":55.4705882353,
+    "message":"Did not converge within 800 episodes",
+    "experiment":"random_policy",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":111.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.43,
+    "message":"Converged at ep 111 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":115.0,
+    "converged":true,
+    "final_success":0.98,
+    "final_steps":8.3979591837,
+    "message":"Converged at ep 115 | MA Success: 0.980 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":117.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.5,
+    "message":"Converged at ep 117 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":115.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.28,
+    "message":"Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":116.0,
+    "converged":true,
+    "final_success":0.93,
+    "final_steps":8.6774193548,
+    "message":"Converged at ep 116 | MA Success: 0.930 | MA Steps: 8.7 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":114.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.3838383838,
+    "message":"Converged at ep 114 | MA Success: 0.990 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_1024"
+  },
+  {
+    "converged_episode":109.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.3434343434,
+    "message":"Converged at ep 109 | MA Success: 0.990 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":109.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.45,
+    "message":"Converged at ep 109 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":116.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.5151515152,
+    "message":"Converged at ep 116 | MA Success: 0.990 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":107.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.55,
+    "message":"Converged at ep 107 | MA Success: 1.000 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_789"
+  },
+  {
+    "converged_episode":115.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.46,
+    "message":"Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":117.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.34,
+    "message":"Converged at ep 117 | MA Success: 1.000 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":115.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.36,
+    "message":"Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.4 (Thr: \u226410)",
+    "experiment":"dense",
+    "seed":"seed_456"
+  },
+  {
+    "converged_episode":109.0,
+    "converged":true,
+    "final_success":0.99,
+    "final_steps":8.5252525253,
+    "message":"Converged at ep 109 | MA Success: 0.990 | MA Steps: 8.5 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_123"
+  },
+  {
+    "converged_episode":109.0,
+    "converged":true,
+    "final_success":1.0,
+    "final_steps":8.33,
+    "message":"Converged at ep 109 | MA Success: 1.000 | MA Steps: 8.3 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_42"
+  },
+  {
+    "converged_episode":116.0,
+    "converged":true,
+    "final_success":0.96,
+    "final_steps":8.5520833333,
+    "message":"Converged at ep 116 | MA Success: 0.960 | MA Steps: 8.6 (Thr: \u226410)",
+    "experiment":"sparse",
+    "seed":"seed_456"
+  }
+]

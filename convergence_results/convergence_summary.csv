@@ -1,0 +1,109 @@
+﻿converged_episode,converged,final_success,final_steps,message,experiment,seed
+196.0,True,0.96,8.53125,Converged at ep 196 | MA Success: 0.960 | MA Steps: 8.5 (Thr: ≤10),alpha_0.05,seed_123
+195.0,True,1.0,8.45,Converged at ep 195 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),alpha_0.05,seed_42
+200.0,True,0.99,8.434343434343434,Converged at ep 200 | MA Success: 0.990 | MA Steps: 8.4 (Thr: ≤10),alpha_0.05,seed_456
+144.0,True,1.0,8.61,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: ≤10),alpha_0.1,seed_123
+143.0,True,1.0,8.36,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),alpha_0.1,seed_42
+143.0,True,0.97,8.463917525773196,Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: ≤10),alpha_0.1,seed_456
+110.0,True,1.0,8.43,Converged at ep 110 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),alpha_0.5,seed_123
+109.0,True,0.98,8.428571428571429,Converged at ep 109 | MA Success: 0.980 | MA Steps: 8.4 (Thr: ≤10),alpha_0.5,seed_42
+108.0,True,0.96,8.270833333333334,Converged at ep 108 | MA Success: 0.960 | MA Steps: 8.3 (Thr: ≤10),alpha_0.5,seed_456
+143.0,True,0.99,8.292929292929292,Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: ≤10),baseline,seed_1024
+144.0,True,1.0,8.36,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),baseline,seed_123
+143.0,True,1.0,8.5,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),baseline,seed_42
+143.0,True,0.96,8.395833333333334,Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),baseline,seed_456
+143.0,True,0.94,8.287234042553191,Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: ≤10),baseline,seed_789
+144.0,True,1.0,8.61,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: ≤10),easy,seed_123
+143.0,True,1.0,8.36,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),easy,seed_42
+143.0,True,0.97,8.463917525773196,Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: ≤10),easy,seed_456
+141.0,True,0.99,8.343434343434344,Converged at ep 141 | MA Success: 0.990 | MA Steps: 8.3 (Thr: ≤10),hard,seed_123
+141.0,True,0.97,8.329896907216495,Converged at ep 141 | MA Success: 0.970 | MA Steps: 8.3 (Thr: ≤10),hard,seed_42
+144.0,True,0.96,8.40625,Converged at ep 144 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),hard,seed_456
+143.0,True,0.99,8.373737373737374,Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.4 (Thr: ≤10),medium,seed_123
+142.0,True,0.96,8.354166666666666,Converged at ep 142 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),medium,seed_42
+139.0,True,0.96,8.364583333333334,Converged at ep 139 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),medium,seed_456
+137.0,True,1.0,8.26,Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.3 (Thr: ≤10),fast,seed_1024
+140.0,True,1.0,8.41,Converged at ep 140 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),fast,seed_123
+136.0,True,0.98,8.479591836734693,Converged at ep 136 | MA Success: 0.980 | MA Steps: 8.5 (Thr: ≤10),fast,seed_42
+136.0,True,0.97,8.391752577319588,Converged at ep 136 | MA Success: 0.970 | MA Steps: 8.4 (Thr: ≤10),fast,seed_456
+143.0,True,1.0,8.49,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),fast,seed_789
+137.0,True,1.0,8.72,Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.7 (Thr: ≤10),fixed_0.1,seed_1024
+136.0,True,0.9,8.566666666666666,Converged at ep 136 | MA Success: 0.900 | MA Steps: 8.6 (Thr: ≤10),fixed_0.1,seed_123
+136.0,True,1.0,8.75,Converged at ep 136 | MA Success: 1.000 | MA Steps: 8.8 (Thr: ≤10),fixed_0.1,seed_42
+136.0,True,0.94,8.680851063829786,Converged at ep 136 | MA Success: 0.940 | MA Steps: 8.7 (Thr: ≤10),fixed_0.1,seed_456
+140.0,True,0.94,8.97872340425532,Converged at ep 140 | MA Success: 0.940 | MA Steps: 9.0 (Thr: ≤10),fixed_0.1,seed_789
+,False,0.98,15.285714285714286,Did not converge within 800 episodes,slow,seed_1024
+,False,0.99,15.818181818181818,Did not converge within 800 episodes,slow,seed_123
+,False,0.99,14.878787878787879,Did not converge within 800 episodes,slow,seed_42
+,False,0.96,15.885416666666666,Did not converge within 800 episodes,slow,seed_456
+,False,0.97,14.474226804123711,Did not converge within 800 episodes,slow,seed_789
+204.0,True,1.0,8.45,Converged at ep 204 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),standard,seed_1024
+248.0,True,0.97,8.31958762886598,Converged at ep 248 | MA Success: 0.970 | MA Steps: 8.3 (Thr: ≤10),standard,seed_123
+220.0,True,1.0,8.42,Converged at ep 220 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),standard,seed_42
+202.0,True,1.0,8.34,Converged at ep 202 | MA Success: 1.000 | MA Steps: 8.3 (Thr: ≤10),standard,seed_456
+218.0,True,1.0,8.51,Converged at ep 218 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),standard,seed_789
+133.0,True,1.0,8.47,Converged at ep 133 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),decay_0.95,seed_123
+130.0,True,1.0,8.36,Converged at ep 130 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),decay_0.95,seed_42
+130.0,True,0.98,8.408163265306122,Converged at ep 130 | MA Success: 0.980 | MA Steps: 8.4 (Thr: ≤10),decay_0.95,seed_456
+137.0,True,1.0,8.53,Converged at ep 137 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),decay_0.99,seed_123
+136.0,True,1.0,8.38,Converged at ep 136 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),decay_0.99,seed_42
+133.0,True,0.97,8.45360824742268,Converged at ep 133 | MA Success: 0.970 | MA Steps: 8.5 (Thr: ≤10),decay_0.99,seed_456
+144.0,True,1.0,8.61,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.6 (Thr: ≤10),decay_0.995,seed_123
+143.0,True,1.0,8.36,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),decay_0.995,seed_42
+143.0,True,0.97,8.463917525773196,Converged at ep 143 | MA Success: 0.970 | MA Steps: 8.5 (Thr: ≤10),decay_0.995,seed_456
+177.0,True,0.98,8.255102040816327,Converged at ep 177 | MA Success: 0.980 | MA Steps: 8.3 (Thr: ≤10),gamma_0.5,seed_1024
+172.0,True,0.96,8.395833333333334,Converged at ep 172 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),gamma_0.5,seed_123
+180.0,True,1.0,8.38,Converged at ep 180 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),gamma_0.5,seed_42
+181.0,True,0.98,8.459183673469388,Converged at ep 181 | MA Success: 0.980 | MA Steps: 8.5 (Thr: ≤10),gamma_0.5,seed_456
+172.0,True,0.95,8.494736842105263,Converged at ep 172 | MA Success: 0.950 | MA Steps: 8.5 (Thr: ≤10),gamma_0.5,seed_789
+147.0,True,0.98,8.244897959183673,Converged at ep 147 | MA Success: 0.980 | MA Steps: 8.2 (Thr: ≤10),gamma_0.8,seed_1024
+149.0,True,0.97,8.381443298969073,Converged at ep 149 | MA Success: 0.970 | MA Steps: 8.4 (Thr: ≤10),gamma_0.8,seed_123
+144.0,True,1.0,8.51,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),gamma_0.8,seed_42
+147.0,True,0.97,8.371134020618557,Converged at ep 147 | MA Success: 0.970 | MA Steps: 8.4 (Thr: ≤10),gamma_0.8,seed_456
+150.0,True,0.93,8.290322580645162,Converged at ep 150 | MA Success: 0.930 | MA Steps: 8.3 (Thr: ≤10),gamma_0.8,seed_789
+143.0,True,0.99,8.292929292929292,Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: ≤10),gamma_0.95,seed_1024
+144.0,True,1.0,8.36,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),gamma_0.95,seed_123
+143.0,True,1.0,8.5,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),gamma_0.95,seed_42
+143.0,True,0.96,8.395833333333334,Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),gamma_0.95,seed_456
+143.0,True,0.94,8.287234042553191,Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: ≤10),gamma_0.95,seed_789
+147.0,True,1.0,8.44,Converged at ep 147 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),gamma_0.99,seed_1024
+144.0,True,1.0,8.39,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),gamma_0.99,seed_123
+138.0,True,1.0,8.48,Converged at ep 138 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),gamma_0.99,seed_42
+137.0,True,0.96,8.395833333333334,Converged at ep 137 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),gamma_0.99,seed_456
+138.0,True,0.95,8.294736842105262,Converged at ep 138 | MA Success: 0.950 | MA Steps: 8.3 (Thr: ≤10),gamma_0.99,seed_789
+143.0,True,0.99,8.292929292929292,Converged at ep 143 | MA Success: 0.990 | MA Steps: 8.3 (Thr: ≤10),easy,seed_1024
+144.0,True,1.0,8.36,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),easy,seed_123
+143.0,True,1.0,8.5,Converged at ep 143 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),easy,seed_42
+143.0,True,0.96,8.395833333333334,Converged at ep 143 | MA Success: 0.960 | MA Steps: 8.4 (Thr: ≤10),easy,seed_456
+143.0,True,0.94,8.287234042553191,Converged at ep 143 | MA Success: 0.940 | MA Steps: 8.3 (Thr: ≤10),easy,seed_789
+147.0,True,0.97,8.381443298969073,Converged at ep 147 | MA Success: 0.970 | MA Steps: 8.4 (Thr: ≤10),hard,seed_1024
+141.0,True,0.98,8.346938775510203,Converged at ep 141 | MA Success: 0.980 | MA Steps: 8.3 (Thr: ≤10),hard,seed_123
+141.0,True,1.0,8.49,Converged at ep 141 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),hard,seed_42
+144.0,True,0.98,8.316326530612244,Converged at ep 144 | MA Success: 0.980 | MA Steps: 8.3 (Thr: ≤10),hard,seed_456
+134.0,True,0.93,8.516129032258064,Converged at ep 134 | MA Success: 0.930 | MA Steps: 8.5 (Thr: ≤10),hard,seed_789
+144.0,True,1.0,8.45,Converged at ep 144 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),medium,seed_1024
+143.0,True,0.98,8.408163265306122,Converged at ep 143 | MA Success: 0.980 | MA Steps: 8.4 (Thr: ≤10),medium,seed_123
+142.0,True,1.0,8.49,Converged at ep 142 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),medium,seed_42
+139.0,True,0.98,8.316326530612244,Converged at ep 139 | MA Success: 0.980 | MA Steps: 8.3 (Thr: ≤10),medium,seed_456
+138.0,True,0.97,8.43298969072165,Converged at ep 138 | MA Success: 0.970 | MA Steps: 8.4 (Thr: ≤10),medium,seed_789
+,False,0.19,53.05263157894737,Did not converge within 800 episodes,random_policy,seed_1024
+,False,0.19,43.421052631578945,Did not converge within 800 episodes,random_policy,seed_123
+,False,0.25,46.8,Did not converge within 800 episodes,random_policy,seed_42
+,False,0.19,51.421052631578945,Did not converge within 800 episodes,random_policy,seed_456
+,False,0.17,55.470588235294116,Did not converge within 800 episodes,random_policy,seed_789
+111.0,True,1.0,8.43,Converged at ep 111 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),dense,seed_1024
+115.0,True,0.98,8.39795918367347,Converged at ep 115 | MA Success: 0.980 | MA Steps: 8.4 (Thr: ≤10),dense,seed_123
+117.0,True,1.0,8.5,Converged at ep 117 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),dense,seed_42
+115.0,True,1.0,8.28,Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.3 (Thr: ≤10),dense,seed_456
+116.0,True,0.93,8.67741935483871,Converged at ep 116 | MA Success: 0.930 | MA Steps: 8.7 (Thr: ≤10),dense,seed_789
+114.0,True,0.99,8.383838383838384,Converged at ep 114 | MA Success: 0.990 | MA Steps: 8.4 (Thr: ≤10),sparse,seed_1024
+109.0,True,0.99,8.343434343434344,Converged at ep 109 | MA Success: 0.990 | MA Steps: 8.3 (Thr: ≤10),sparse,seed_123
+109.0,True,1.0,8.45,Converged at ep 109 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),sparse,seed_42
+116.0,True,0.99,8.515151515151516,Converged at ep 116 | MA Success: 0.990 | MA Steps: 8.5 (Thr: ≤10),sparse,seed_456
+107.0,True,1.0,8.55,Converged at ep 107 | MA Success: 1.000 | MA Steps: 8.6 (Thr: ≤10),sparse,seed_789
+115.0,True,1.0,8.46,Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.5 (Thr: ≤10),dense,seed_123
+117.0,True,1.0,8.34,Converged at ep 117 | MA Success: 1.000 | MA Steps: 8.3 (Thr: ≤10),dense,seed_42
+115.0,True,1.0,8.36,Converged at ep 115 | MA Success: 1.000 | MA Steps: 8.4 (Thr: ≤10),dense,seed_456
+109.0,True,0.99,8.525252525252526,Converged at ep 109 | MA Success: 0.990 | MA Steps: 8.5 (Thr: ≤10),sparse,seed_123
+109.0,True,1.0,8.33,Converged at ep 109 | MA Success: 1.000 | MA Steps: 8.3 (Thr: ≤10),sparse,seed_42
+116.0,True,0.96,8.552083333333334,Converged at ep 116 | MA Success: 0.960 | MA Steps: 8.6 (Thr: ≤10),sparse,seed_456
