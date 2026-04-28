@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+baseline_789_c187ba37,baseline,789,easy,800,1.66,0.94,8.14,1.0,8.0,0.05,results\baseline\seed_789\qtable_final.npz,results\baseline\seed_789\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167

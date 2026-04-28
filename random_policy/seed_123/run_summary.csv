@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+random_policy_123_f58592b9,random_policy,123,easy,800,-55.7,0.19,52.21,0.0,100.0,1.0,results\random_policy\seed_123\qtable_final.npz,results\random_policy\seed_123\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167
