@@ -1,2 +1,0 @@
-run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
-alpha_0.1_456_0c262f4f,alpha_0.1,456,easy,500,2.04,0.97,8.36,1.0,8.0,0.05,results\alpha_comparison\alpha_0.1\seed_456\qtable_final.npz,results\alpha_comparison\alpha_0.1\seed_456\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167
