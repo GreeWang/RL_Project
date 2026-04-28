@@ -1,0 +1,62 @@
+{
+  "best_eval_avg_steps": 8.0,
+  "best_eval_success_rate": 1.0,
+  "checkpoints": [
+    "results\\reward_comparison\\sparse\\seed_42\\qtable_ep200.npz",
+    "results\\reward_comparison\\sparse\\seed_42\\qtable_ep400.npz"
+  ],
+  "config_path": "results\\reward_comparison\\sparse\\seed_42\\config.json",
+  "episode_log_path": "results\\reward_comparison\\sparse\\seed_42\\episode_log.csv",
+  "episodes": 500,
+  "exp_name": "reward_sparse",
+  "final_epsilon": 0.05,
+  "git_commit": "790cc50393d7b4b8d4339536b75d590d5aa4c167",
+  "last100_avg_reward": 9.83,
+  "last100_avg_steps": 8.33,
+  "last100_success_rate": 1.0,
+  "map_name": "easy",
+  "map_spec": {
+    "cols": 5,
+    "goal": [
+      4,
+      4
+    ],
+    "name": "easy",
+    "obstacles": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "rows": 5,
+    "start": [
+      0,
+      0
+    ],
+    "traps": [
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  "qtable_path": "results\\reward_comparison\\sparse\\seed_42\\qtable_final.npz",
+  "reward_config": {
+    "goal_reward": 10.0,
+    "step_penalty": 0.0,
+    "trap_penalty": -10.0,
+    "wall_penalty": -1.0
+  },
+  "run_id": "reward_sparse_42_b58f15e9",
+  "run_summary_path": "results\\reward_comparison\\sparse\\seed_42\\run_summary.csv",
+  "seed": 42,
+  "shortest_path_len": 8
+}

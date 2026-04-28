@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+reward_sparse_123_cc068aa0,reward_sparse,123,easy,800,9.65,0.99,8.34,1.0,8.0,0.05,results\reward\sparse\seed_123\qtable_final.npz,results\reward\sparse\seed_123\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167

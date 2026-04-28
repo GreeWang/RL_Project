@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+gamma_0.8_456_345f4dca,gamma_0.8,456,easy,800,2.11,0.97,8.29,1.0,8.0,0.05,results\gamma_comparison\gamma_0.8\seed_456\qtable_final.npz,results\gamma_comparison\gamma_0.8\seed_456\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167

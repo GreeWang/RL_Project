@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+map_medium_42_71d72d43,map_medium,42,medium,500,2.02,0.96,8.18,1.0,8.0,0.05,results\difficulty_comparison\medium\seed_42\qtable_final.npz,results\difficulty_comparison\medium\seed_42\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167

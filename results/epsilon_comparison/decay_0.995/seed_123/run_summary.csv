@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+eps_decay_0.995_123_c18156a3,eps_decay_0.995,123,easy,500,2.39,1.0,8.61,1.0,8.0,0.05,results\epsilon_comparison\decay_0.995\seed_123\qtable_final.npz,results\epsilon_comparison\decay_0.995\seed_123\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167

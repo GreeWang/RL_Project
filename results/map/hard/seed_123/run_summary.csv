@@ -1,0 +1,2 @@
+run_id,exp_name,seed,map_name,episodes,last100_avg_reward,last100_success_rate,last100_avg_steps,best_eval_success_rate,best_eval_avg_steps,final_epsilon,qtable_path,config_path,git_commit
+map_hard_123_2e773419,map_hard,123,hard,800,2.34,0.98,8.26,1.0,8.0,0.05,results\map\hard\seed_123\qtable_final.npz,results\map\hard\seed_123\config.json,790cc50393d7b4b8d4339536b75d590d5aa4c167
