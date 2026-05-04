@@ -243,6 +243,7 @@ def build_policy_figure(
 
     state_values = np.max(q_table, axis=1).reshape(rows, cols)
     policy = np.argmax(q_table, axis=1).reshape(rows, cols)
+    final_path = [tuple(position) for position in summary.get("final_path", [])]
 
     masked_values = state_values.copy()
     for row, col in obstacles:
@@ -274,7 +275,18 @@ def build_policy_figure(
                 color = "black"
             ax.text(col, row, text, ha="center", va="center", fontsize=16, fontweight="bold", color=color)
 
-    ax.set_title("Final Policy and State Values")
+    if len(final_path) > 1:
+        path_rows = [position[0] for position in final_path]
+        path_cols = [position[1] for position in final_path]
+        ax.plot(path_cols, path_rows, color="#fdb863", linewidth=3.0, alpha=0.9, label="greedy path")
+        ax.scatter(path_cols, path_rows, color="#fdb863", edgecolor="#5e3c99", s=45, zorder=3)
+
+    title_parts = ["Final Policy and State Values"]
+    if "algorithm" in summary:
+        title_parts.append(str(summary["algorithm"]))
+    if "route_type" in summary:
+        title_parts.append(f"route={summary['route_type']}")
+    ax.set_title(" | ".join(title_parts))
     ax.set_xticks(np.arange(cols))
     ax.set_yticks(np.arange(rows))
     ax.set_xlabel("Column")
@@ -290,6 +302,7 @@ def build_policy_figure(
         "Legend:",
         f"S=start  G=goal  T=trap  #=obstacle",
         "Arrows show greedy action from final Q-table",
+        "Orange line shows final greedy rollout path",
         f"Action order: {', '.join(f'{idx}={name}' for idx, name in enumerate(ACTION_NAMES))}",
     ]
     fig.text(0.02, 0.02, "\n".join(legend_lines), ha="left", va="bottom", fontsize=10, family="monospace")

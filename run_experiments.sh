@@ -1,7 +1,9 @@
 SEEDS=(42 123 456 789 1024)
+REPORT_SEEDS=(42 123 456)
 BASE_ARGS="--episodes 800 --eval-every 20 --eval-episodes 10 --max-steps 100 --goal-reward 10.0"
+REPORT_ARGS="--episodes 1000 --eval-every 20 --eval-episodes 10 --max-steps 100 --goal-reward 10.0 --alpha 0.1 --gamma 0.9 --epsilon-start 1.0 --epsilon-end 0.05 --epsilon-decay 0.995"
 
-echo "Experiments training begin, 5 groups * 5 seeds = 125 compuations"
+echo "Experiments training begin"
 
 # ==========================================
 # 1. Baseline vs Random Policy
@@ -94,4 +96,76 @@ for m in easy medium hard; do
     done
 done
 
-echo "All experiments finished. Data hve been saved in results/exp/param/seed dict"
+echo "Core experiments finished. Starting report experiments."
+
+# ==========================================
+# 5. Q-Learning vs SARSA on hard map
+# ==========================================
+echo "5/6 Q-Learning vs SARSA"
+for algo in q_learning sarsa; do
+    for s in "${REPORT_SEEDS[@]}"; do
+        python train.py --exp-name algorithm_${algo} \
+            --algorithm ${algo} \
+            --outdir results/algorithm_comparison/${algo}/seed_${s} \
+            --seed ${s} \
+            --map-name hard \
+            --step-penalty -0.1 --trap-penalty -5.0 ${REPORT_ARGS}
+    done
+done
+
+# ==========================================
+# 6. Trap Penalty / Risk Sensitivity
+# ==========================================
+echo "6/6 Trap Penalty Risk Sensitivity"
+for algo in q_learning sarsa; do
+    for trap_abs in 5 10 30; do
+        trap_penalty="-${trap_abs}"
+        for s in "${REPORT_SEEDS[@]}"; do
+            python train.py --exp-name trap_penalty_${algo}_${trap_abs} \
+                --algorithm ${algo} \
+                --outdir results/trap_penalty/${algo}/trap_${trap_abs}/seed_${s} \
+                --seed ${s} \
+                --map-name risk \
+                --step-penalty -0.1 --trap-penalty ${trap_penalty} ${REPORT_ARGS}
+        done
+    done
+done
+
+echo "Report experiments finished. Use python visualize_experiments.py to aggregate comparison figures."
+
+# ==========================================
+# 7. SARSA Hyperparameter Tuning
+# ==========================================
+echo "7/7 SARSA Hyperparameter Tuning"
+
+for a in 0.05 0.1 0.5; do
+    for s in "${REPORT_SEEDS[@]}"; do
+        python train.py --exp-name sarsa_alpha_${a} \
+            --algorithm sarsa \
+            --outdir results/sarsa_alpha_comparison/alpha_${a}/seed_${s} \
+            --seed ${s} \
+            --alpha ${a} ${BASE_ARGS}
+    done
+done
+
+for g in 0.5 0.8 0.95 0.99; do
+    for s in "${SEEDS[@]}"; do
+        python train.py --exp-name sarsa_gamma_${g} \
+            --algorithm sarsa \
+            --outdir results/sarsa_gamma_comparison/gamma_${g}/seed_${s} \
+            --seed ${s} \
+            --gamma ${g} ${BASE_ARGS}
+    done
+done
+
+for d in 0.95 0.99 0.995; do
+    for s in "${REPORT_SEEDS[@]}"; do
+        python train.py --exp-name sarsa_epsilon_decay_${d} \
+            --algorithm sarsa \
+            --outdir results/sarsa_epsilon_comparison/decay_${d}/seed_${s} \
+            --seed ${s} \
+            --epsilon-start 1.0 --epsilon-end 0.05 --epsilon-decay ${d} ${BASE_ARGS}
+    done
+done
+
+echo "SARSA tuning experiments finished."

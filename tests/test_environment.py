@@ -59,3 +59,14 @@ def test_shortest_path_is_found() -> None:
     env = GridWorldEnv(rows=5, cols=5, map_name="easy", max_steps=20)
     shortest = env.shortest_path_len()
     assert shortest > 0
+
+
+def test_risk_map_builds_with_valid_route() -> None:
+    env = GridWorldEnv(rows=5, cols=5, map_name="risk", max_steps=30)
+    assert env.start == (0, 0)
+    assert env.goal == (0, 4)
+    assert env.start not in env.obstacles
+    assert env.goal not in env.obstacles
+    assert env.start not in env.traps
+    assert env.goal not in env.traps
+    assert env.shortest_path_len() > 0

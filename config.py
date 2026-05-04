@@ -39,6 +39,7 @@ class MapSpec:
 @dataclass(frozen=True)
 class TrainingDefaults:
     exp_name: str = "baseline"
+    algorithm: str = "q_learning"
     rows: int = 5
     cols: int = 5
     map_name: str = "easy"
@@ -151,7 +152,19 @@ def build_map_spec(name: str, rows: int, cols: int) -> MapSpec:
     mid_row = rows // 2
     mid_col = cols // 2
 
-    if name == "easy":
+    if name == "risk":
+        if rows != 5 or cols != 5:
+            raise ValueError("The risk map preset requires rows=5 and cols=5.")
+        goal = (0, 4)
+        obstacles = (
+            (1, 1),
+            (1, 3),
+            (2, 2),
+        )
+        traps = (
+            (1, 2),
+        )
+    elif name == "easy":
         obstacles = (
             (1, 1),
             (2, 1),
@@ -190,7 +203,7 @@ def build_map_spec(name: str, rows: int, cols: int) -> MapSpec:
             (rows - 3, cols - 2),
         )
     else:
-        raise ValueError("Unknown map name '{}'. Choices: easy, medium, hard.".format(name))
+        raise ValueError("Unknown map name '{}'. Choices: easy, medium, hard, risk.".format(name))
 
     filtered_obstacles = _filter_cells(
         obstacles,

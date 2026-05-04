@@ -5,7 +5,9 @@ from pathlib import Path
 import numpy as np
 
 
-class QLearningAgent:
+class TabularTDAgent:
+    algorithm = "td"
+
     def __init__(
         self,
         n_states: int,
@@ -46,19 +48,6 @@ class QLearningAgent:
             return int(self.rng.integers(self.n_actions))
         return self._greedy_action(state_id)
 
-    def update(
-        self,
-        state_id: int,
-        action: int,
-        reward: float,
-        next_state_id: int,
-        terminated: bool,
-    ) -> None:
-        current_value = self.q_table[state_id, action]
-        bootstrap = 0.0 if terminated else np.max(self.q_table[next_state_id])
-        target = reward + self.gamma * bootstrap
-        self.q_table[state_id, action] = current_value + self.alpha * (target - current_value)
-
     def decay_epsilon(self) -> None:
         self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
 
@@ -79,6 +68,7 @@ class QLearningAgent:
             epsilon_decay=np.array(self.epsilon_decay),
             n_states=np.array(self.n_states),
             n_actions=np.array(self.n_actions),
+            algorithm=np.array(self.algorithm),
         )
 
     @classmethod
@@ -104,3 +94,38 @@ class QLearningAgent:
         best_value = np.max(values)
         best_actions = np.flatnonzero(np.isclose(values, best_value))
         return int(self.rng.choice(best_actions))
+
+
+class QLearningAgent(TabularTDAgent):
+    algorithm = "q_learning"
+
+    def update(
+        self,
+        state_id: int,
+        action: int,
+        reward: float,
+        next_state_id: int,
+        terminated: bool,
+    ) -> None:
+        current_value = self.q_table[state_id, action]
+        bootstrap = 0.0 if terminated else np.max(self.q_table[next_state_id])
+        target = reward + self.gamma * bootstrap
+        self.q_table[state_id, action] = current_value + self.alpha * (target - current_value)
+
+
+class SarsaAgent(TabularTDAgent):
+    algorithm = "sarsa"
+
+    def update(
+        self,
+        state_id: int,
+        action: int,
+        reward: float,
+        next_state_id: int,
+        next_action: int | None,
+        terminated: bool,
+    ) -> None:
+        current_value = self.q_table[state_id, action]
+        bootstrap = 0.0 if terminated or next_action is None else self.q_table[next_state_id, next_action]
+        target = reward + self.gamma * bootstrap
+        self.q_table[state_id, action] = current_value + self.alpha * (target - current_value)

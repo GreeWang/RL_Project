@@ -9,17 +9,22 @@ import numpy as np
 
 from config import DEFAULTS, list_reward_presets
 from environment import GridWorldEnv
-from q_learning import QLearningAgent
+from q_learning import QLearningAgent, SarsaAgent, TabularTDAgent
 from utils_io import ensure_dir, get_git_commit, save_json, write_csv_rows
 from utils_seed import make_rng, set_global_seed
 
 
+ALGORITHM_CHOICES = ("q_learning", "sarsa")
+MAP_CHOICES = ("easy", "medium", "hard", "risk")
+
+
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Train or evaluate tabular Q-Learning on GridWorld.")
+    parser = argparse.ArgumentParser(description="Train or evaluate tabular TD control on GridWorld.")
     parser.add_argument("--exp-name", type=str, default=DEFAULTS.exp_name)
+    parser.add_argument("--algorithm", type=str, default=DEFAULTS.algorithm, choices=ALGORITHM_CHOICES)
     parser.add_argument("--rows", type=int, default=DEFAULTS.rows)
     parser.add_argument("--cols", type=int, default=DEFAULTS.cols)
-    parser.add_argument("--map-name", type=str, default=DEFAULTS.map_name, choices=["easy", "medium", "hard"])
+    parser.add_argument("--map-name", type=str, default=DEFAULTS.map_name, choices=MAP_CHOICES)
     parser.add_argument(
         "--reward-setting",
         type=str,
@@ -73,7 +78,86 @@ def save_summary(summary: dict, path: str) -> None:
     save_json(summary, path)
 
 
-def evaluate_policy(env: GridWorldEnv, agent: QLearningAgent, episodes: int, seed: int) -> dict:
+def make_agent(args: argparse.Namespace, env: GridWorldEnv, rng: np.random.Generator) -> TabularTDAgent:
+    agent_cls = SarsaAgent if args.algorithm == "sarsa" else QLearningAgent
+    return agent_cls(
+        n_states=env.n_states,
+        n_actions=env.n_actions,
+        alpha=args.alpha,
+        gamma=args.gamma,
+        epsilon_start=args.epsilon_start,
+        epsilon_end=args.epsilon_end,
+        epsilon_decay=args.epsilon_decay,
+        rng=rng,
+    )
+
+
+def calc_convergence(
+    episode_logs: list[dict],
+    shortest_path_len: int,
+    *,
+    window: int = 100,
+    success_thr: float = 0.9,
+) -> int | None:
+    if len(episode_logs) < window:
+        return None
+
+    step_thr = shortest_path_len + 2
+    for idx in range(len(episode_logs)):
+        left = max(0, idx - window + 1)
+        window_rows = episode_logs[left : idx + 1]
+        success_rate = float(np.mean([row["success"] for row in window_rows]))
+        success_steps = [row["steps"] for row in window_rows if row["success"]]
+        if not success_steps:
+            continue
+        avg_success_steps = float(np.mean(success_steps))
+        if success_rate >= success_thr and avg_success_steps <= step_thr:
+            return int(window_rows[-1]["episode"])
+    return None
+
+
+def trace_greedy_path(env: GridWorldEnv, agent: TabularTDAgent) -> dict:
+    obs, _ = env.reset(seed=0)
+    path = [tuple(env.position)]
+    state_id = env.obs_to_state_id(obs)
+    total_reward = 0.0
+    terminated = False
+    truncated = False
+    hit_trap = False
+
+    while not (terminated or truncated):
+        action = int(np.argmax(agent.q_table[state_id]))
+        next_obs, reward, terminated, truncated, info = env.step(action)
+        state_id = env.obs_to_state_id(next_obs)
+        path.append(tuple(env.position))
+        total_reward += reward
+        hit_trap = bool(info["hit_trap"])
+
+    success = bool(tuple(env.position) == env.goal and terminated)
+    traps = [tuple(trap) for trap in env.traps]
+    near_trap = any(
+        abs(position[0] - trap[0]) + abs(position[1] - trap[1]) <= 1
+        for position in path
+        for trap in traps
+    )
+    if not success:
+        route_type = "failed"
+    elif near_trap:
+        route_type = "risky"
+    else:
+        route_type = "safe"
+
+    return {
+        "final_path": path,
+        "final_path_length": len(path) - 1 if success else 0,
+        "final_path_reward": total_reward,
+        "route_type": route_type,
+        "final_path_success": success,
+        "final_path_hit_trap": hit_trap,
+    }
+
+
+def evaluate_policy(env: GridWorldEnv, agent: TabularTDAgent, episodes: int, seed: int) -> dict:
     rewards: list[float] = []
     steps: list[int] = []
     successes = 0
@@ -134,19 +218,10 @@ def evaluate_policy(env: GridWorldEnv, agent: QLearningAgent, episodes: int, see
 def train_one_run(args: argparse.Namespace) -> dict:
     set_global_seed(args.seed)
     outdir = ensure_dir(args.outdir)
-    run_id = f"{args.exp_name}_{args.seed}_{uuid.uuid4().hex[:8]}"
+    run_id = f"{args.exp_name}_{args.algorithm}_{args.seed}_{uuid.uuid4().hex[:8]}"
     env = make_env(args)
     rng = make_rng(args.seed)
-    agent = QLearningAgent(
-        n_states=env.n_states,
-        n_actions=env.n_actions,
-        alpha=args.alpha,
-        gamma=args.gamma,
-        epsilon_start=args.epsilon_start,
-        epsilon_end=args.epsilon_end,
-        epsilon_decay=args.epsilon_decay,
-        rng=rng,
-    )
+    agent = make_agent(args, env, rng)
 
     config_snapshot = vars(args).copy()
     config_snapshot["map_spec"] = env.map_spec.as_dict()
@@ -158,6 +233,12 @@ def train_one_run(args: argparse.Namespace) -> dict:
     eval_logs: list[dict] = []
     qtable_paths: list[str] = []
     best_eval = {"success_rate": -1.0, "avg_steps": float("inf")}
+    final_eval = {
+        "success_rate": 0.0,
+        "avg_reward": 0.0,
+        "avg_steps": 0.0,
+        "trap_rate": 0.0,
+    }
 
     train_episodes = 0 if args.no_train else args.episodes
 
@@ -171,18 +252,32 @@ def train_one_run(args: argparse.Namespace) -> dict:
         truncated = False
         hit_trap = False
         qtable_path = ""
+        action = agent.select_action(state_id, greedy=False)
 
         while not (terminated or truncated):
-            action = agent.select_action(state_id, greedy=False)
             next_obs, reward, terminated, truncated, info = env.step(action)
             next_state_id = env.obs_to_state_id(next_obs)
-            agent.update(
-                state_id=state_id,
-                action=action,
-                reward=reward,
-                next_state_id=next_state_id,
-                terminated=terminated,
-            )
+            if args.algorithm == "sarsa":
+                next_action = None if terminated or truncated else agent.select_action(next_state_id, greedy=False)
+                agent.update(
+                    state_id=state_id,
+                    action=action,
+                    reward=reward,
+                    next_state_id=next_state_id,
+                    next_action=next_action,
+                    terminated=terminated,
+                )
+                action = 0 if next_action is None else next_action
+            else:
+                agent.update(
+                    state_id=state_id,
+                    action=action,
+                    reward=reward,
+                    next_state_id=next_state_id,
+                    terminated=terminated,
+                )
+                if not (terminated or truncated):
+                    action = agent.select_action(next_state_id, greedy=False)
             state_id = next_state_id
             total_reward += reward
             step_count += 1
@@ -202,6 +297,7 @@ def train_one_run(args: argparse.Namespace) -> dict:
             {
                 "run_id": run_id,
                 "exp_name": args.exp_name,
+                "algorithm": args.algorithm,
                 "phase": "train",
                 "episode": episode_idx,
                 "seed": args.seed,
@@ -235,6 +331,7 @@ def train_one_run(args: argparse.Namespace) -> dict:
                 {
                     "run_id": run_id,
                     "exp_name": args.exp_name,
+                    "algorithm": args.algorithm,
                     "seed": args.seed,
                     "map_name": args.map_name,
                     "rows": args.rows,
@@ -247,6 +344,12 @@ def train_one_run(args: argparse.Namespace) -> dict:
                 }
                 for row in eval_result["logs"]
             )
+            final_eval = {
+                "success_rate": eval_result["success_rate"],
+                "avg_reward": eval_result["avg_reward"],
+                "avg_steps": eval_result["avg_steps"],
+                "trap_rate": eval_result["trap_rate"],
+            }
             if eval_result["success_rate"] > best_eval["success_rate"]:
                 best_eval = {
                     "success_rate": eval_result["success_rate"],
@@ -267,18 +370,30 @@ def train_one_run(args: argparse.Namespace) -> dict:
     last100_avg_reward = float(np.mean([row["total_reward"] for row in last_window])) if last_window else 0.0
     last100_success_rate = float(np.mean([row["success"] for row in last_window])) if last_window else 0.0
     last100_avg_steps = float(np.mean([row["steps"] for row in last_window])) if last_window else 0.0
+    last100_trap_rate = float(np.mean([row["hit_trap"] for row in last_window])) if last_window else 0.0
+    convergence_episode = calc_convergence(episode_logs, env.shortest_path_len())
+    path_metrics = trace_greedy_path(env, agent)
 
     summary_row = {
         "run_id": run_id,
         "exp_name": args.exp_name,
+        "algorithm": args.algorithm,
         "seed": args.seed,
         "map_name": args.map_name,
         "episodes": train_episodes,
         "last100_avg_reward": last100_avg_reward,
         "last100_success_rate": last100_success_rate,
         "last100_avg_steps": last100_avg_steps,
+        "last100_trap_rate": last100_trap_rate,
         "best_eval_success_rate": best_eval["success_rate"] if best_eval["success_rate"] >= 0 else 0.0,
         "best_eval_avg_steps": best_eval["avg_steps"] if np.isfinite(best_eval["avg_steps"]) else 0.0,
+        "final_eval_success_rate": final_eval["success_rate"],
+        "final_eval_avg_reward": final_eval["avg_reward"],
+        "final_eval_avg_steps": final_eval["avg_steps"],
+        "final_eval_trap_rate": final_eval["trap_rate"],
+        "convergence_episode": "" if convergence_episode is None else convergence_episode,
+        "final_path_length": path_metrics["final_path_length"],
+        "route_type": path_metrics["route_type"],
         "final_epsilon": agent.epsilon,
         "qtable_path": final_qtable_path,
         "config_path": str(config_path),
@@ -292,6 +407,8 @@ def train_one_run(args: argparse.Namespace) -> dict:
         "map_spec": env.map_spec.as_dict(),
         "reward_config": env.rewards,
         "shortest_path_len": env.shortest_path_len(),
+        "convergence_episode": convergence_episode,
+        **path_metrics,
         "checkpoints": qtable_paths,
         "episode_log_path": str(episode_log_path),
         "run_summary_path": str(run_summary_path),
